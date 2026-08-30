@@ -8,7 +8,7 @@ import  CarHeadlights from "./Mask group (1).png"
 
 const Products = () => {
   return (
-    <div className='products'>
+    <div id="products" className='products'>
 
         <div className='product-text-content'>
             <h3>Top Picks For You</h3>
@@ -53,7 +53,7 @@ const Products = () => {
         </div>
     
         <div className='view-more'>
-        <a href="#">View More</a>
+        <a href="/#">View More</a>
         <div className='line'></div>
         </div>
         

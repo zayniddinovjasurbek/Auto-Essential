@@ -1,45 +1,76 @@
 .products {
     padding-top: 40px;
-} 
+    min-height: 800px;
+}
 
- .product-text-content h3 {
+.product-text-content h3 {
     font-size: 36px;
     text-align: center;
+    margin: 0;
 }
 
 .product-text-content p {
     font-size: 16px;
     text-align: center;
     color: #9F9F9F;
-    padding: 20px;
+    padding: 30px 0 50px;
     font-weight: 500;
+    margin: 0;
 }
 
 .product-img-content {
-    display: flex;
-    justify-content: space-around;
-} 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
 
+.product-img-content > div {
+    width: 100%;
+}
+
+/* RASMLAR */
+.product-img-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* RASM TAGIDAGI MA'LUMOT */
 .product-img-content p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    padding-top: 20px;
+    min-height: 92px;
+    box-sizing: border-box;
+    padding-left: 50px;
 }
 
 .product-img-content h3 {
     font-size: 24px;
-    font-weight: 500    ;
+    font-weight: 500;
+    margin: 15px 0 0;
+    padding-left: 50px;
+}
+
+/* VIEW MORE */
+.view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .view-more a {
-    display:flex;
+    display: inline-block;
     font-weight: bold;
-    align-items: center;
-    justify-content: space-around;
     color: black;
     font-size: 20px;
     text-decoration: none;
-    font-weight: 500;
-    padding: 15px;
+    padding: 15px 30px;
     border-bottom: 2px solid black;
 }

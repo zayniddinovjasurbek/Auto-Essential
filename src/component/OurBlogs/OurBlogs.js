@@ -11,7 +11,7 @@ import { BsCalendar2Date } from "react-icons/bs";
 
 const OurBlogs = () => {
   return (
-    <div className='OurBlogs'>
+    <div id="ourblogs" className='OurBlogs'>
 
       <div className='blogs-text-content'>
             <h1>Our Blogs</h1>
@@ -23,27 +23,27 @@ const OurBlogs = () => {
             <div className='img1'>
                 <img src={img1} alt="img1"/>
                 <h2>How to change engine oil at home?</h2>
-                <a href='#'>Read More</a> 
+                <a href='/#'>Read More</a> 
                 <p> <FaRegClock /> 5 min  <BsCalendar2Date /> 12<sup>th</sup> Oct 2023 </p> 
             </div>
         
             <div>
                 <img src={img2} alt="img2"/>
                 <h2>Guide to prolong the life of engine oil</h2>
-                <a href='#'>Read More</a>
+                <a href='/#'>Read More</a>
                 <p> <FaRegClock /> 5 min  <BsCalendar2Date /> 12<sup>th</sup> Oct 2023 </p> 
             </div>
             <div>
                 <img src={img3} alt="img3"/>
                 <h2>How to take care of engine oil?</h2>
-                <a href='#'>Read More</a>
+                <a href='/#'>Read More</a>
                 <p> <FaRegClock /> 5 min  <BsCalendar2Date /> 12<sup>th</sup> Oct 2023 </p> 
             </div>
 
         
       </div>
         <div className='view-all-post'>
-           <p><a href='#'>View All Post</a></p> 
+           <p><a href='/#'>View All Post</a></p> 
         </div>
     </div>
   );

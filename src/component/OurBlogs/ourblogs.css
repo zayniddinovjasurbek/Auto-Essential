@@ -2,25 +2,36 @@
     font-size: 36px;
     padding-top: 30px;
     text-align: center;
+    margin: 0;
 }
 
 .blogs-text-content p {
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 10px;
     text-align: center;
     color: #9F9F9F;
+    margin: 0;
 }
 
 .blogs-img-content {
-    padding-top: 30px;
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
+    height: 600px;
+}
+
+.blogs-img-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
 }
 
 .blogs-img-content h2 {
-    padding: 20px 0px;
+    padding: 20px 0;
+    margin: 0;
     font-size: 20px;
 }
 
@@ -34,21 +45,51 @@
 }
 
 .blogs-img-content p {
-    padding: 30px 0px;
-    gap: 20px;
+    padding: 30px 0;
+    margin: 0;
 }
 
+/* VIEW ALL POST */
+
 .view-all-post {
-    text-decoration: none;
-    text-align: center; 
-    padding: 30px 0px;
+    text-align: center;
+    padding: 10px;
+    margin-top: -35px;
+    margin-bottom: 30px;
 }
 
 .view-all-post a {
+    position: relative;
+    display: inline-block;
+
     font-size: 20px;
     text-decoration: none;
     color: black;
-    border-bottom: 2.4px solid black;
-    padding: 10px;
+
+    padding: 10px 5px;
 }
 
+/* Hover chizig'i */
+
+.view-all-post a::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: black;
+    border-radius: 50px;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+.view-all-post a:hover::before {
+    transform: scaleX(1);
+}

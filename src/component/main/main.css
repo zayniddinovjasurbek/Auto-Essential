@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 50px;
+  height: 740px;
 }
 .text-content h1 {
   font-size: 64px;
@@ -46,9 +47,10 @@
 }
   
 .image-content  {
-  margin-left: 100px;
+  margin-left: 80px;
 }
 .image-content img {
-  height: 507px;
-  width: 506px;
+  height: 547px;
+  width: 536px;
+  top: 2740px;
 }

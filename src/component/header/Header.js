@@ -8,13 +8,13 @@ const Header = () => {
   return (
 
     <header>
-            <div class="contact-info">
+      <div class="contact-info">
         <div class="contact-item">
-        <FaPhoneAlt />
+        <FaPhoneAlt className="phone-icon" />
         <p>Call us <br/> <a href="tel:+923146146470">+92 314 61 46 470</a></p>
         </div>
         <div class="contact-item">
-        <HiOutlineMail />
+        <HiOutlineMail className="mail-icon" />
             <p>  Send us mail <br/> <a href="mailto:autoessentials@gmail.com">autoessentials@gmail.com</a></p>
         </div>
         <div class="contact-item">

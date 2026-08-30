@@ -1,42 +1,111 @@
 .main {
-  text-align: center;
-  background: #D4D4D4;
+    display: flex;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    width: 100%;
+    height: 75px;
+
+    background: #D4D4D4;
+
+    transition: background-color 0.3s ease;
 }
+
+
+/* =========================
+   SECTION BO'YICHA NAVBAR RANGLARI
+========================= */
+
+.main.navbar-servise {
+    background: #F5F5F5;
+}
+
+.main.navbar-products {
+    background: #FFFFFF;
+}
+
+.main.navbar-new {
+    background: #A5A5A5;
+}
+
+.main.navbar-ourblogs {
+    background: #FFFFFF;
+}
+
+.main.navbar-contact {
+    background: #222222;
+}
+
+
+/* =========================
+   NAV
+========================= */
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+    font-size: 20px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
+
+
+/* =========================
+   LOGO
+========================= */
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+    height: 75px;
+    width: 317px;
 }
 
-nav  {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
 }
 
 nav ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  gap: 70px;
+    display: flex;
 
+    list-style-type: none;
+
+    align-items: center;
+
+    gap: 70px;
 }
 
 .nav a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+
+    color: black;
 }
 
+
+/* =========================
+   ICONS
+========================= */
+
 .icons {
-  padding: 0px 30px;
+    padding: 0 30px;
+
     display: flex;
+
     gap: 40px;
+
     font-size: 20px;
 }

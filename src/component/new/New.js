@@ -4,7 +4,7 @@ import shell from './Asgaard sofa 1.png'
 
 const New = () => {
   return (
-    <div className='NewArrivals'>
+    <div id="new" className='NewArrivals'>
 
       <div className='new-img-content'>
             <img src={shell} alt="Asgaard"/>

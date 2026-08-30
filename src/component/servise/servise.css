@@ -3,10 +3,11 @@
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;
+    height: 740px;
 }
 
 .servise img {
-    padding-top: 100px;
+    padding-top: 130px;
 }
 
 .Lubricants h3 {
@@ -20,6 +21,7 @@
     color: black;
     text-decoration: none;
     border-bottom: 3px solid black;
+    
 }
 
 .Spare-Parts h3 {
