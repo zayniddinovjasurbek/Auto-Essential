@@ -15,7 +15,8 @@ const Login = () => {
             <input type="text" />
             <label htmlFor="Password">Password</label>
             <input type="Password" />
-           <span className="name"><input type="checkbox" /><label htmlFor="checkbox" className="name"> Remember me</label></span> 
+           <span className="name"><input type="checkbox" />
+           <label htmlFor="checkbox" className="remember-me"> Remember me</label></span> 
             
             
           <span><button>Log In</button> <a href="Lost Your Password?">Lost Your Password?</a></span>  
@@ -29,7 +30,10 @@ const Login = () => {
             <label htmlFor="email address">Email address</label>
             <input type="text" id=""/>
             <p>A link to set a new password will be sent to your email address.</p>
-            <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="/">Pricavy policy</a>.</p>
+            <p>Your personal data will be used to support
+               your experience throughout this website, 
+               to manage access to your account, and for other
+                purposes described in our <a href="/">Pricavy policy</a>.</p>
             <button>Register</button>
           </form>
         </div>

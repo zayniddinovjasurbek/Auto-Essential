@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './single.css';
 
 import Product from './Asgaard sofa 3.png';
-import Thumbnail_1 from './Mask group (1).png';
-import Thumbnail2 from './Mask group (2).png';
-import Thumbnail3 from './Mask group (3).png';
-import Thumbnail4 from './Mask group (4).png';
+import Thumbnail_1 from './shop tire1.png';
+import Thumbnail2 from './shop tire2.png';
+import Thumbnail3 from './shop tire3.png';
+import Thumbnail4 from './shop tire4.png';
 
 import Additional1 from './Group 107.png';
 import Additional2 from './Group 106.png';
@@ -16,6 +16,7 @@ import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function Single() {
+  const [mainImage, setMainImage] = useState(Product);
   const [quantity, setQuantity] = useState(1);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
   const [activeTab, setActiveTab] = useState('description');
@@ -50,15 +51,35 @@ function Single() {
         <div className="image-gallery">
           <div className="thumbnail-images">
             {/* Thumbnail images */}
-            <img src={Thumbnail_1} alt="Thumbnail 1" className='thumbnail' />      
-            <img src={Thumbnail2} alt="Thumbnail 2" className='thumbnail'/>
-            <img src={Thumbnail3} alt="Thumbnail 3" className='thumbnail'/>
-            <img src={Thumbnail4} alt="Thumbnail 4" className='thumbnail'/>
+            <img
+    src={Thumbnail_1}
+    alt="Thumbnail 1"
+    className="thumbnail"
+    onClick={() => setMainImage(Thumbnail_1)}
+/>    
+            <img
+    src={Thumbnail2}
+    alt="Thumbnail 2"
+    className="thumbnail"
+    onClick={() => setMainImage(Thumbnail2)}
+/>
+            <img
+    src={Thumbnail3}
+    alt="Thumbnail 3"
+    className="thumbnail"
+    onClick={() => setMainImage(Thumbnail3)}
+/>            
+<img
+    src={Thumbnail4}
+    alt="Thumbnail 4"
+    className="thumbnail"
+    onClick={() => setMainImage(Thumbnail4)}
+/>
           </div>
 
           <div className="main-image">
             {/* Main product image */}
-            <img src={Product} alt="Product" />
+            <img src={mainImage} alt="Product" />
           </div>
         </div>
       
@@ -98,6 +119,7 @@ function Single() {
             <p>Color</p>
             <div className='color-black'></div>
           </div>
+          
 
           <div className="quantity-selector-container">
             <div className="quantity-selector">
@@ -109,7 +131,7 @@ function Single() {
           </div>
 
           <div className="product-meta">
-            <p>SKU: 0012</p>
+            <span><p>SKU:  0012</p></span>
             <p>Category: Tire</p>
             <p>Tags: Tire, Rim, Shop</p>
             <p>Product ID: 13</p>
@@ -123,7 +145,7 @@ function Single() {
         </div>
       </div>
       
-      <hr />
+      <hr className='hr-line1'/>
 
       <div className="product-tabs">
         <h6 
@@ -165,16 +187,41 @@ function Single() {
           </div>
         )}
         {activeTab === 'additional' && (
-          <div>
-            <p>Additional Information Content</p>
+          <div className='add-information'>
+            <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat. Duis aute irure dolor in r
+            eprehenderit in voluptate velit esse cillum dolore
+            </p>
+            <div className="additional-images">
+              <img src={Additional1} alt="Additional1" />
+              <img src={Additional2} alt="Additional2" />
+              
+            </div>
           </div>
         )}
         {activeTab === 'reviews' && (
-          <div>
-            <p>Reviews Content</p>
+      <div className='reviews'>
+            <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat. Duis aute irure dolor in r
+            eprehenderit in voluptate velit esse cillum dolore
+            </p>
+            <div className="additional-images">
+              <img src={Additional1} alt="Additional1" />
+              <img src={Additional2} alt="Additional2" />
+              
+            </div>
           </div>
         )}
       </div>
+      <hr id='hr-line' />
     </div>
   );
 }

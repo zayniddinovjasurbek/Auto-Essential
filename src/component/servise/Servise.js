@@ -12,13 +12,13 @@ const Servise = () => {
         <div className='Lubricants'>
             <img src={Lubricants} alt="main.img"/>
             <h3>Lubricants</h3>
-            <a href="/products">View More</a>
+            <a href="/shop">View More</a>
         </div>
 
         <div className='Spare-Parts'>
             <img src={SpareParts} alt="main.img"/>
             <h3>Spare-Parts</h3>
-            <a href="/#">View More</a>
+            <a href="/shop">View More</a>
         </div>
         
     </div>
