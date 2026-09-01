@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom"
-import Header from './component/header/Header'
+// import Header from './component/header/Header'
 import Footer from "./component/footer/Footer"; 
 import Navbar from "./component/navbar/Navbar";
 import Home from "./pages/home/Home";

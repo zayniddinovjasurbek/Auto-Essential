@@ -12,7 +12,7 @@ const Follow = () => {
             <div className='follow-text-content'>
                 <h1>Our Instagram</h1>
                 <h6>Follow our store on Instagram</h6>
-                <a href="#">Follow Us</a>
+                <a href="/">Follow Us</a>
             </div>
         </div>
 

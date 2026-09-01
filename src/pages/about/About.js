@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { FaAngleRight } from "react-icons/fa6";
+// import { FaAngleRight } from "react-icons/fa6";
 import { FaShieldAlt, FaTruck, FaTags, FaHeadset } from "react-icons/fa";
 import './about.css'
 

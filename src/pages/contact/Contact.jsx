@@ -1,13 +1,13 @@
 import "./Contact.css";
-import Contact_banner from "./contact_banner/Contact_banner";
-import Contact_blog from "./contact_blog/Contact_blog";
-import Facility from "..//shop/facility/Facility"
+import ContactBanner from "../contact/contact_banner/Contact_banner";
+import ContactBlog from "../contact/contact_blog/Contact_blog";
+import Facility from "../shop/facility/Facility";
 
 const Contact = () => {
   return (
     <div>
-      <Contact_banner/>
-      <Contact_blog/>   
+      <ContactBanner />
+      <ContactBlog />
       <Facility />
     </div>
   );
