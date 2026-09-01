@@ -53,7 +53,7 @@ const Products = () => {
         </div>
     
         <div className='view-more'>
-        <a href="/#">View More</a>
+        <a href="/shop">View More</a>
         <div className='line'></div>
         </div>
         

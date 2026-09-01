@@ -8,7 +8,7 @@ const Main = () => {
       <div className="text-content">
         <h1><span className="highlight">Auto</span> Spare Parts</h1>
         <p>All Major Brands Available</p>
-        <button className="shop-button">Shop Now</button>
+        <a href="/shop" className="shop-button">Shop Now</a>
       </div>
       <div className="image-content">
         <img src={mainImg} alt="main.img" />

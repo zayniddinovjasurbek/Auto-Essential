@@ -13,7 +13,7 @@ const New = () => {
       <div className='new-text-content'>
             <h6>New Arrivals</h6>
             <h1>Shell Engine Oil</h1>
-            <button>Shop Now</button>
+        <a href="/shop" className="shop-button">Shop Now</a>
       </div>
 
     </div>

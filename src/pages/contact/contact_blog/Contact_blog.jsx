@@ -1,9 +1,38 @@
-import React from 'react'     
+import React, { useState } from 'react'
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import './contact_blog.css'
 
 const Contact_blog = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Iltimos, kerakli maydonlarni to'ldiring!");
+      return;
+    }
+
+    setSubmitted(true);
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 4000);
+  };
+
   return (
     <div>
       <div className="contact">
@@ -35,29 +64,59 @@ const Contact_blog = () => {
 
           </div>
 
-          <form className='contact-form'>
+          <form className='contact-form' onSubmit={handleSubmit}>
 
             <div className="form-group">
               <label htmlFor="firstname">Your name</label>
-              <input type="text" placeholder='Abs' />
+              <input
+                type="text"
+                name="name"
+                placeholder='Abs'
+                value={formData.name}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="form-group">
               <label htmlFor="email">Email address</label>
-              <input type="email" placeholder='Abc@def.com' />
+              <input
+                type="email"
+                name="email"
+                placeholder='Abc@def.com'
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="form-group">
               <label htmlFor="subject">Subject</label>
-              <input type="text" placeholder='This is an optional' />
+              <input
+                type="text"
+                name="subject"
+                placeholder='This is an optional'
+                value={formData.subject}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" placeholder='Hi! i’d like to ask about'></textarea>
+              <textarea
+                id="message"
+                name="message"
+                placeholder='Hi! i’d like to ask about'
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
             </div>
 
-            <button>Submit</button>
+            <button type="submit">Submit</button>
+
+            {submitted && (
+              <p className="thank-you-message">
+                Rahmat! Xabaringiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog'lanamiz.
+              </p>
+            )}
 
           </form>
         </div>

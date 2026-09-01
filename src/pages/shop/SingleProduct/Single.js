@@ -10,16 +10,18 @@ import Thumbnail4 from './shop tire4.png';
 import Additional1 from './Group 107.png';
 import Additional2 from './Group 106.png';
 
-
 import { MdChevronRight } from "react-icons/md";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useCart } from '../../../context/CartContext';
 
 function Single() {
   const [mainImage, setMainImage] = useState(Product);
   const [quantity, setQuantity] = useState(1);
   const [activeButtons, setActiveButtons] = useState([false, false, false]);
   const [activeTab, setActiveTab] = useState('description');
+
+  const { addToCart } = useCart();
 
   const increaseQuantity = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -40,6 +42,16 @@ function Single() {
     setActiveTab(tab);
   };
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: 13,
+      name: 'MIRAGE MR–AT172 285/65',
+      price: 50000,
+      image: Product,
+      quantity: quantity,
+    });
+  };
+
   return (
     <div className="product-page">
       <div className="breadcrumb">
@@ -50,35 +62,13 @@ function Single() {
       <div className="product-details">
         <div className="image-gallery">
           <div className="thumbnail-images">
-            {/* Thumbnail images */}
-            <img
-    src={Thumbnail_1}
-    alt="Thumbnail 1"
-    className="thumbnail"
-    onClick={() => setMainImage(Thumbnail_1)}
-/>    
-            <img
-    src={Thumbnail2}
-    alt="Thumbnail 2"
-    className="thumbnail"
-    onClick={() => setMainImage(Thumbnail2)}
-/>
-            <img
-    src={Thumbnail3}
-    alt="Thumbnail 3"
-    className="thumbnail"
-    onClick={() => setMainImage(Thumbnail3)}
-/>            
-<img
-    src={Thumbnail4}
-    alt="Thumbnail 4"
-    className="thumbnail"
-    onClick={() => setMainImage(Thumbnail4)}
-/>
+            <img src={Thumbnail_1} alt="Thumbnail 1" className="thumbnail" onClick={() => setMainImage(Thumbnail_1)} />    
+            <img src={Thumbnail2} alt="Thumbnail 2" className="thumbnail" onClick={() => setMainImage(Thumbnail2)} />
+            <img src={Thumbnail3} alt="Thumbnail 3" className="thumbnail" onClick={() => setMainImage(Thumbnail3)} />            
+            <img src={Thumbnail4} alt="Thumbnail 4" className="thumbnail" onClick={() => setMainImage(Thumbnail4)} />
           </div>
 
           <div className="main-image">
-            {/* Main product image */}
             <img src={mainImage} alt="Product" />
           </div>
         </div>
@@ -95,31 +85,15 @@ function Single() {
           </p>
           <div className="size">
             <p>Size</p>
-            <button
-              className={`toggle-button ${activeButtons[0] ? 'toggled' : ''}`}
-              onClick={() => handleButtonClick(0)}
-            >
-              17
-            </button> 
-            <button
-              className={`toggle-button ${activeButtons[1] ? 'toggled' : ''}`}
-              onClick={() => handleButtonClick(1)}
-            >
-              21
-            </button>
-            <button
-              className={`toggle-button ${activeButtons[2] ? 'toggled' : ''}`}
-              onClick={() => handleButtonClick(2)}
-            >
-              24
-            </button> 
+            <button className={`toggle-button ${activeButtons[0] ? 'toggled' : ''}`} onClick={() => handleButtonClick(0)}>17</button> 
+            <button className={`toggle-button ${activeButtons[1] ? 'toggled' : ''}`} onClick={() => handleButtonClick(1)}>21</button>
+            <button className={`toggle-button ${activeButtons[2] ? 'toggled' : ''}`} onClick={() => handleButtonClick(2)}>24</button> 
           </div>
 
           <div className="color">
             <p>Color</p>
             <div className='color-black'></div>
           </div>
-          
 
           <div className="quantity-selector-container">
             <div className="quantity-selector">
@@ -127,7 +101,7 @@ function Single() {
               <span className="quantity-display">{quantity}</span>
               <button className="quantity-button" onClick={increaseQuantity}>+</button>
             </div>
-            <button className="add-to-cart-button">Add To Cart</button>
+            <button className="add-to-cart-button" onClick={handleAddToCart}>Add To Cart</button>
           </div>
 
           <div className="product-meta">
@@ -148,26 +122,10 @@ function Single() {
       <hr className='hr-line1'/>
 
       <div className="product-tabs">
-        <h6 
-          className={activeTab === 'description' ? 'active' : ''} 
-          onClick={() => handleTabClick('description')}
-        >
-          Description
-        </h6>
-        <h6 
-          className={activeTab === 'additional' ? 'active' : ''} 
-          onClick={() => handleTabClick('additional')}
-        >
-          Additional Information
-        </h6>
-        <h6 
-          className={activeTab === 'reviews' ? 'active' : ''} 
-          onClick={() => handleTabClick('reviews')}
-        >
-          Reviews [5]
-        </h6>
+        <h6 className={activeTab === 'description' ? 'active' : ''} onClick={() => handleTabClick('description')}>Description</h6>
+        <h6 className={activeTab === 'additional' ? 'active' : ''} onClick={() => handleTabClick('additional')}>Additional Information</h6>
+        <h6 className={activeTab === 'reviews' ? 'active' : ''} onClick={() => handleTabClick('reviews')}>Reviews [5]</h6>
       </div>
-
 
       <div className="product-description">
         {activeTab === 'description' && (
@@ -182,7 +140,6 @@ function Single() {
             <div className="additional-images">
               <img src={Additional1} alt="Additional1" />
               <img src={Additional2} alt="Additional2" />
-              
             </div>
           </div>
         )}
@@ -199,12 +156,11 @@ function Single() {
             <div className="additional-images">
               <img src={Additional1} alt="Additional1" />
               <img src={Additional2} alt="Additional2" />
-              
             </div>
           </div>
         )}
         {activeTab === 'reviews' && (
-      <div className='reviews'>
+          <div className='reviews'>
             <p>
             lorem ipsum dolor sit amet, consectetur adipiscing 
             elit. Sed do eiusmod tempor incididunt ut labore et 
@@ -216,7 +172,6 @@ function Single() {
             <div className="additional-images">
               <img src={Additional1} alt="Additional1" />
               <img src={Additional2} alt="Additional2" />
-              
             </div>
           </div>
         )}
